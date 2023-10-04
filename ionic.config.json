@@ -1,0 +1,7 @@
+{
+  "name": "arabsoft",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
