@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Arabsoft
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,25 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Movies</ion-title>
+    </ion-toolbar>
+  
+  </ion-header>
+  <ion-header>
+    <ion-toolbar color="dark"></ion-toolbar>
+    <ion-toolbar color="dark">
+      <ion-searchbar [(ngModel)]="searchTitle"></ion-searchbar>
+      <ion-buttons slot="end">
+        <ion-button color="light" (click)="searchMovie()">
+          <ion-icon name="search-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="img_box" color="light">
+    <img [src]="movieData.imageUrl">
   </div>
+  <h1>Title : {{ movieData.title }}</h1>
+  <p>description : {{ movieData.description }}</p>
+  <p> Boxoffice :{{ movieData.BoxOffice }}</p>
 </ion-content>
