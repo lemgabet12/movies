@@ -16,6 +16,8 @@ export class HomePage {
     description: '',
     BoxOffice: '',
     imageUrl: '',
+    Country:'',
+    Language:'',
   };
   readAPI(URL: string) {
     return this.http.get<any>(URL);
@@ -36,6 +38,9 @@ export class HomePage {
   this.movieData.description = data['Plot'];
   this.movieData.BoxOffice = data['BoxOffice'];
   this.movieData.imageUrl = data['Poster'];
+  this.movieData.Country = data['Country'];
+  this.movieData.Language = data['Language'];
+  
 });
 }
 }
