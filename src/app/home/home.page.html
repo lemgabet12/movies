@@ -13,17 +13,7 @@
     </ion-toolbar>
   
   </ion-header>
-  <ion-header>
-    <ion-toolbar style="color: red;"></ion-toolbar>
-    <ion-toolbar style="color: green;">
-      <ion-searchbar [(ngModel)]="searchTitle"></ion-searchbar>
-      <ion-buttons slot="end">
-        <ion-button color="green" (click)="searchMovie()">
-          <ion-icon name="search-sharp"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  
   <div class="img_box" color="light">
     <img style="width: 370px; height: 370px;" [src]="movieData.imageUrl" alt="picture">
   </div>

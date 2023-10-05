@@ -24,25 +24,19 @@ export class HomePage {
     return this.http.get<any>(URL);
   }
   constructor(private http: HttpClient) {
-    
+    this.movieApiUrl = 'https://www.omdbapi.com/?i=tt3896198&apikey=a6f58373';
+    this.readAPI( this.movieApiUrl)
+    .subscribe((data) => {
+    console.log(data);
+    this.movieData.title = data['Title'];
+    this.movieData.description = data['Plot'];
+    this.movieData.BoxOffice = data['BoxOffice'];
+    this.movieData.imageUrl = data['Poster'];
+    this.movieData.Country = data['Country'];
+    this.movieData.Language = data['Language'];
+    this.movieData.Type = data['Type'];
 
   }
-  searchMovie()
-{
-  const search = encodeURIComponent(this.searchTitle).trim();
-  console.log("rechrche du film" + search);
-  this.movieApiUrl = 'https://www.omdbapi.com/?i=tt3896198&apikey=a6f58373&t=' + search;
-  this.readAPI( this.movieApiUrl)
-  .subscribe((data) => {
-  console.log(data);
-  this.movieData.title = data['Title'];
-  this.movieData.description = data['Plot'];
-  this.movieData.BoxOffice = data['BoxOffice'];
-  this.movieData.imageUrl = data['Poster'];
-  this.movieData.Country = data['Country'];
-  this.movieData.Language = data['Language'];
-  this.movieData.Type = data['Type'];
-  
-});
+);
 }
 }
