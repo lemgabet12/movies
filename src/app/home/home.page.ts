@@ -18,6 +18,7 @@ export class HomePage {
     imageUrl: '',
     Country:'',
     Language:'',
+    Type:'',
   };
   readAPI(URL: string) {
     return this.http.get<any>(URL);
@@ -40,6 +41,7 @@ export class HomePage {
   this.movieData.imageUrl = data['Poster'];
   this.movieData.Country = data['Country'];
   this.movieData.Language = data['Language'];
+  this.movieData.Type = data['Type'];
   
 });
 }

@@ -14,23 +14,25 @@
   
   </ion-header>
   <ion-header>
-    <ion-toolbar color="dark"></ion-toolbar>
-    <ion-toolbar color="dark">
+    <ion-toolbar style="color: red;"></ion-toolbar>
+    <ion-toolbar style="color: green;">
       <ion-searchbar [(ngModel)]="searchTitle"></ion-searchbar>
       <ion-buttons slot="end">
-        <ion-button color="light" (click)="searchMovie()">
+        <ion-button color="green" (click)="searchMovie()">
           <ion-icon name="search-sharp"></ion-icon>
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <div class="img_box" color="light">
-    <img style="width: 170px; height: 170px;" [src]="movieData.imageUrl">
+    <img style="width: 370px; height: 370px;" [src]="movieData.imageUrl">
   </div>
   <h1 style=" color: black;"><span style="size: 170px;">Title :</span> {{ movieData.title }}</h1>
   <p style="color: black;">description : {{ movieData.description }}</p>
-  <p style="color: black;"> Boxoffice :{{ movieData.BoxOffice }}</p>
-  <p style="color: black;"> Country :{{ movieData.Country }}</p>
-  <p style="color: black;"> Language :{{ movieData.Language }}</p>
+  <p style="color: black;"> Boxoffice : {{ movieData.BoxOffice }}</p>
+  <p style="color: black;"> Country : {{ movieData.Country }}</p>
+  <p style="color: black;"> Language : {{ movieData.Language }}</p>
+  <p style="color: black;"> Type : {{ movieData.Type }}</p>
+  
   
 </ion-content>
